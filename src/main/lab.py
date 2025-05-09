@@ -32,7 +32,8 @@ class Lab:
         """
         try:
             with open(filename, 'r') as file:
-                return 0
+                content = file.read()
+                return content
         except FileNotFoundError:
             print(f"File '{filename}' not found.")
             return None
